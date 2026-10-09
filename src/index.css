@@ -92,7 +92,23 @@ h1 em, h2 em { color: var(--rose); font-style: italic; }
 .project-info p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; max-width: 56ch; }
 .timeline { max-width: none; }
 .timeline-item { grid-template-columns: 40px 180px 1fr; padding: 38px 0; }
-.contact-form { border: 0; border-top: 1px solid var(--line); padding: 28px 0 0; background: transparent; }
+.contact-grid { grid-template-columns: 1fr; justify-items: center; }
+.contact-copy { text-align: center; }
+.contact-copy > p:not(.section-kicker) { margin-right: auto; margin-left: auto; }
+.social-links { align-items: center; }
+.contact-section { padding: 112px 0 96px; position: relative; overflow: hidden; }
+.contact-grid { width: min(760px, calc(100% - 48px)); }
+.contact-copy { width: 100%; }
+.contact-copy .section-kicker { margin: 0 0 22px; color: var(--moss); font: 500 10px var(--mono); letter-spacing: .18em; }
+.contact-copy h2 { margin-top: 0; }
+.contact-copy > p:not(.section-kicker) { max-width: 390px; margin-top: 22px; margin-bottom: 32px; }
+.social-links { width: min(100%, 540px); margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.social-links a { min-height: 56px; justify-content: flex-start; padding: 0 16px; gap: 12px; border: 1px solid var(--line); color: var(--beige); background: rgba(16,86,102,.14); transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+.social-links a:hover { transform: translateY(-2px); border-color: var(--rose); background: rgba(211,150,140,.09); }
+.social-links a > span { flex: 1; text-align: left; }
+.social-links a svg:first-child { color: var(--moss); }
+.social-links a svg:last-child { color: var(--rose); }
+.site-footer { padding-top: 24px; padding-bottom: 24px; }
 .statement-band { background: linear-gradient(115deg, var(--midnight), var(--green)); }
 
 @media (max-width: 700px) {
